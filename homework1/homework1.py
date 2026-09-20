@@ -166,7 +166,7 @@ print(my_string[3]) # prints the fourth character of the string, which is "l"
 print(my_string[4]) # prints the fifth character of the string, which is "o"
 print(my_string[-1]) # prints the last character of the string, which is "o" -- goes backwards
 print(my_string[1:3]) # prints the range of characters from 1 to 3, excluding the last index, which is "el"
-#print(my_string[0:5:2]) # prints the range of characters from 0 to 5, stepping by 2, which is "hlo"
+print(my_string[0:5:2]) # prints the range of characters from 0 to 5, stepping by 2, which is "hlo"
 print(len(my_string))
 print(my_string + "goodbye")
 print(my_string * 7)
@@ -186,7 +186,6 @@ print(f"Hello, my name is {name}")
 
 
 # --- TERMINAL COMMANDS
-
 '''
 1. cd
  - changes directory, use it to move between folders
@@ -195,8 +194,8 @@ print(f"Hello, my name is {name}")
  - lists files within current directory, use it to see what files/folders are in current directory
  - example: ls (whenever you are already in a directory and want to see what to move into)
 3. ls -a
- - 
- - 
+ - lists all files/directories in current folder INCLUDING hidden ones, use it to see ALL directories
+ - example: ls -a
 4. mkdir
  - makes a new directory, use it to create a new folder
  - example: mkdir new_project
@@ -207,27 +206,35 @@ print(f"Hello, my name is {name}")
  - it prints working directory, meaning it displays the name of the directory you are currently in, use it to see where you are in the file system
  - example: pwd
 7. cd ..
- - 
- - 
+ - moves you up one level into parent folder, use it to go back to previous folder
+ - example: cd .. (Documents/User --> Documents)
 8. cd .
- - 
- - 
+ - keeps you in the exact current directory, use it to stay in the same folder
+ - example: cd . (stays in Documents/User)
 9. cd ∼
- - 
- - 
+ - jumps you to home directory, use it to go back to home folder
+ - example: cd ~ (Documents/User --> /home/Documents/User)
 10. cp
- - 
- - 
+ - copies a file/directory, use it to make copy of file/folder
+ - example: cp [options] source to destination --> cp homework1 lectures
 11. mv
- - 
- - 
+ - moves/renames files and directories, use it to rename or move files and folders
+ - example: mv old_name.txt new_name.txt
 12. rm (be careful with this one)
- - 
- - 
+ - permanently removes files/directories from system, use it when you're SURE you don't need directory
+ - rm notes.txt
 13. clear
  - clears the terminal screen NOT THE CONTENTS, just makes it look clean and gets rid of the words, use it to clear workspace
  - example: clear
 14. grep
- - 
- - 
+ - global regular expression print, used to search for specific words/phrases/patterns inside text files
+ - example: grep "data" homework1.py (like command f?)
+'''
+
+'''
+Questions:
+1. ls -l (shows details of files along with the list of files, use as one would use ls), touch (create new, blank file, use touch new_filename.txt), ping (check network connectivity to specific server, use like pin google.com)
+2. ls lists all files, ls -a lists all files PLUS hidden ones
+3. hidden files are configuration/background settings that macOS intentionally hides from view to prevent accidental deletion/cluttering
+4. -r is recursive for rm (rm -r), -s is summary for du (du -s), -R is recursive for cp (cp -R)
 '''
